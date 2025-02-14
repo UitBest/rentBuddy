@@ -13,7 +13,7 @@
     @vite('resources/css/app.css')
 
     {{--  Title  --}}
-    <title>Laravel</title>
+    <title>rentBuddy - CRUD example</title>
 
 </head>
 <body>

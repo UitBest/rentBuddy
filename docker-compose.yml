@@ -1,7 +1,7 @@
 services:
     app:
-        image: base_app:latest
-        container_name: base_app
+        image: rent_buddy_app:latest
+        container_name: rent_buddy_app
         build:
             context: .
             dockerfile: Dockerfile
@@ -12,11 +12,11 @@ services:
             - .:/var/www
         restart: unless-stopped
         networks:
-            - base
+            - rent_buddy
 
     serve:
-        image: base_serve:latest
-        container_name: base_serve
+        image: rent_buddy_serve:latest
+        container_name: rent_buddy_serve
         build:
             context: .
             dockerfile: Dockerfile
@@ -29,11 +29,11 @@ services:
             - .:/var/www
         restart: unless-stopped
         networks:
-            - base
+            - rent_buddy
 
     dev:
-        image: base_dev:latest
-        container_name: base_dev
+        image: rent_buddy_dev:latest
+        container_name: rent_buddy_dev
         build:
             context: .
             dockerfile: Dockerfile
@@ -46,11 +46,11 @@ services:
             - .:/var/www
         restart: always
         networks:
-            - base
+            - rent_buddy
 
     db:
         image: mysql:8.0
-        container_name: base_db
+        container_name: rent_buddy_db
         restart: unless-stopped
         tty: true
         ports:
@@ -63,9 +63,9 @@ services:
         volumes:
             - dbdata:/var/lib/mysql
         networks:
-            - base
+            - rent_buddy
 networks:
-    base:
+    rent_buddy:
 
 volumes:
     dbdata:

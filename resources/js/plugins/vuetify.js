@@ -34,5 +34,16 @@ export default createVuetify({
         VSheet: {
             color: 'transparent',
         },
+        VTextField: {
+            variant: 'outlined',
+            density: 'compact',
+        },
+        VCombobox: {
+            listProps: {
+                density: 'compact',
+            },
+            variant: 'outlined',
+            density: 'compact',
+        },
     },
 });

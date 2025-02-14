@@ -6,15 +6,15 @@ const routes = [
         path: '',
         name: 'Layout',
         component: () => import('@/js/layouts/Layout.vue'),
-        redirect: { name: 'Home' },
+        redirect: { name: 'Dashboard' },
         meta: {
             mobile: ref(false),
         },
         children: [
             {
-                path: 'home',
-                name: 'Home',
-                component: () => import('../views/Home.vue'),
+                path: 'dashboard',
+                name: 'Dashboard',
+                component: () => import('../views/Dashboard.vue'),
             },
         ],
     },
