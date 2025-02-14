@@ -12,7 +12,9 @@ This is a simple example of a CRUD for showing Laravel + Vue made in exactly 3 h
 6. Run `php artisan key:generate`
 7. Run `docker-compose up -d --build`
 8. **In docker container "app", open terminal and run** `php artisan migrate --seed`
-9. Visit `http://localhost:8000`
+9. Close docker terminal and open terminal on your host in the root of this project folder
+10. Run `npm run build`
+11. Visit `http://localhost:8000`
 
 
 Any problems? Please, let me know! I'll be glad to help you!

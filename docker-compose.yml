@@ -31,23 +31,6 @@ services:
         networks:
             - rent_buddy
 
-    dev:
-        image: rent_buddy_dev:latest
-        container_name: rent_buddy_dev
-        build:
-            context: .
-            dockerfile: Dockerfile
-            target: dev
-        ports:
-            - "83:83"
-        tty: false
-        stdin_open: false
-        volumes:
-            - .:/var/www
-        restart: always
-        networks:
-            - rent_buddy
-
     db:
         image: mysql:8.0
         container_name: rent_buddy_db

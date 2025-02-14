@@ -38,15 +38,3 @@ RUN composer install
 
 # Start de webserver
 CMD php artisan serve --host=0.0.0.0 --port=8000
-
-FROM app as dev
-
-# Expose poort 83
-EXPOSE 83
-
-WORKDIR /var/www
-
-RUN npm install
-
-# Start commando voor ontwikkeling
-CMD npm run dev
